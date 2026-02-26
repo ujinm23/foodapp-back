@@ -5,7 +5,7 @@ const email = "ujinm0223@gmail.com";
 
 console.log("🔍 Хэрэглэгч хайж байна:", email);
 
-fetch("https://foodapp-back-k58d.onrender.com/api/users")
+fetch("https://foodapp-back-1p78.onrender.com/api/users")
   .then((res) => res.json())
   .then((users) => {
     console.log(" Бүх хэрэглэгчид:", users);
@@ -34,7 +34,7 @@ fetch("https://foodapp-back-k58d.onrender.com/api/users")
 
     // Admin эрх өгөх
     return fetch(
-      "https://foodapp-back-k58d.onrender.com/api/users/make-admin",
+      "https://foodapp-back-1p78.onrender.com/api/users/make-admin",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

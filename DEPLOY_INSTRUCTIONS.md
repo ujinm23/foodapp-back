@@ -2,7 +2,7 @@
 
 ## Асуудал
 
-Backend код зассан ч production server (`https://foodapp-back-k58d.onrender.com`) дээр шинэчлэгдээгүй байна.
+Backend код зассан ч production server (`https://foodapp-back-1p78.onrender.com`) дээр шинэчлэгдээгүй байна.
 
 ## Шийдэл
 

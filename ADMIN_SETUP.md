@@ -12,7 +12,7 @@ const email = "ujinm0223@gmail.com";
 
 console.log("🔍 Хэрэглэгч хайж байна:", email);
 
-fetch("https://foodapp-back-k58d.onrender.com/api/users")
+fetch("https://foodapp-back-1p78.onrender.com/api/users")
   .then((res) => res.json())
   .then((users) => {
     const user = users.find((u) => u.email === email);
@@ -34,7 +34,7 @@ fetch("https://foodapp-back-k58d.onrender.com/api/users")
     console.log("🔄 Admin эрх өгөж байна...");
 
     return fetch(
-      "https://foodapp-back-k58d.onrender.com/api/users/make-admin",
+      "https://foodapp-back-1p78.onrender.com/api/users/make-admin",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -118,7 +118,7 @@ db.users.findOne({ email: "ujinm0223@gmail.com" })
 
 ```javascript
 // Бүх хэрэглэгчдийн жагсаалт авах
-fetch("https://foodapp-back-k58d.onrender.com/api/users")
+fetch("https://foodapp-back-1p78.onrender.com/api/users")
   .then((res) => res.json())
   .then((users) => {
     console.log("Бүх хэрэглэгчид:", users);
@@ -140,7 +140,7 @@ fetch("https://foodapp-back-k58d.onrender.com/api/users")
 // Дээрх ID-ийг энд оруулна
 const userId = "USER_ID_HERE"; // Жишээ: "67890abcdef1234567890123"
 
-fetch("https://foodapp-back-k58d.onrender.com/api/users/make-admin", {
+fetch("https://foodapp-back-1p78.onrender.com/api/users/make-admin", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -165,7 +165,7 @@ fetch("https://foodapp-back-k58d.onrender.com/api/users/make-admin", {
 // 1. Email-ээр хэрэглэгч олох
 const email = "your-email@example.com";
 
-fetch("https://foodapp-back-k58d.onrender.com/api/users")
+fetch("https://foodapp-back-1p78.onrender.com/api/users")
   .then((res) => res.json())
   .then((users) => {
     const user = users.find((u) => u.email === email);
@@ -178,7 +178,7 @@ fetch("https://foodapp-back-k58d.onrender.com/api/users")
 
     // 2. Admin эрх өгөх
     return fetch(
-      "https://foodapp-back-k58d.onrender.com/api/users/make-admin",
+      "https://foodapp-back-1p78.onrender.com/api/users/make-admin",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -241,7 +241,7 @@ const email = "user@example.com";
 
 console.log("🔍 Хэрэглэгч хайж байна:", email);
 
-fetch("https://foodapp-back-k58d.onrender.com/api/users")
+fetch("https://foodapp-back-1p78.onrender.com/api/users")
   .then((res) => res.json())
   .then((users) => {
     const user = users.find((u) => u.email === email);
@@ -267,7 +267,7 @@ fetch("https://foodapp-back-k58d.onrender.com/api/users")
     console.log("🔄 Admin эрх өгөж байна...");
 
     return fetch(
-      "https://foodapp-back-k58d.onrender.com/api/users/make-admin",
+      "https://foodapp-back-1p78.onrender.com/api/users/make-admin",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

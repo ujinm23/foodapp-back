@@ -10,8 +10,18 @@ cloudinary.config({
 
 router.post("/", async (req, res) => {
   try {
-    const fileStr = req.body.data;
-    if (!fileStr) return res.status(400).json({ error: "No file data" });
+    // Accept common payload shapes: { data }, { image }, or raw string body.
+    const fileStr =
+      req.body?.data ||
+      req.body?.image ||
+      (typeof req.body === "string" ? req.body : null);
+
+    if (!fileStr) {
+      return res.status(400).json({
+        error:
+          "No image payload found. Send JSON like { data: base64ImageString }",
+      });
+    }
 
     const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
       upload_preset: "food-delivery",

@@ -14,13 +14,13 @@ router.post("/", async (req, res) => {
     if (!fileStr) return res.status(400).json({ error: "No file data" });
 
     const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
-      upload_preset: "food-app",
+      upload_preset: "food-delivery",
     });
 
     res.json({ url: uploadedResponse.secure_url });
   } catch (err) {
     console.log("UPLOAD ERROR:", err);
-    res.status(500).json({ error: "Upload failed" });
+    res.status(500).json({ error: err.message || "Upload failed" });
   }
 });
 
